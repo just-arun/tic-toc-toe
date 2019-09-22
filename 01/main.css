@@ -1,0 +1,128 @@
+h1, h2, h3, h4, h5, h6 {
+  max-width: 300px;
+}
+
+.container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container .content {
+  height: 300px;
+  width: 300px;
+  background: #353535;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .content .tiles {
+  -webkit-box-shadow: 1px 1px 4px 0 black;
+          box-shadow: 1px 1px 4px 0 black;
+  height: 98px;
+  width: 98px;
+  background: #fafafa;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.container .content .tiles span {
+  font-weight: 900;
+  font-size: 6rem;
+}
+
+.TransparentColor {
+  color: #fafafa;
+}
+
+.form {
+  height: auto;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 300px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.form input {
+  position: relative;
+  padding: 10px;
+}
+
+button {
+  -webkit-box-shadow: 1px 1px 2px 0 black;
+          box-shadow: 1px 1px 2px 0 black;
+  border: none;
+  padding: 10px 20px;
+  color: #000000;
+  background: white;
+  outline: none;
+  cursor: pointer;
+  font-weight: 900;
+}
+
+button:hover {
+  background: whitesmoke;
+}
+
+button:active {
+  background: whitesmoke;
+  -webkit-box-shadow: 0.8px 0.8px 0.8px 0 #585858;
+          box-shadow: 0.8px 0.8px 0.8px 0 #585858;
+}
+
+.layout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media screen and (min-width: 620px) {
+  .layout {
+    width: 600px;
+  }
+}
+
+table {
+  position: relative;
+  width: 300px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 14px;
+  text-align: center;
+}
+
+table th {
+  border-bottom: 1px solid black;
+}
+/*# sourceMappingURL=main.css.map */

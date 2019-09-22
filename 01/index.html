@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div class="container">
+        <div>
+          <h1>Tic-Tac-Toe</h1>
+          <div class="layout">
+            <form v-if="formOpen" @submit.prevent="submitFunc()" class="form">
+              <input
+                placeholder="Player One Name"
+                type="text"
+                v-model="player1"
+              />
+              <br />
+              <input
+                placeholder="Player Two Name"
+                type="text"
+                v-model="player2"
+              />
+              <br />
+              <button type="submit">Play</button>
+            </form>
+            <div v-if="!formOpen">
+              <table>
+                <thead>
+                  <th>Player</th>
+                  <th>score</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>{{ player1 }}</td>
+                    <td>{{ player1Score }}</td>
+                  </tr>
+                  <tr>
+                    <td>{{ player2 }}</td>
+                    <td>{{ player2Score }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div>
+              <div v-if="!winner">
+                <h3 v-if="!player">{{ player1 }}'s Turn</h3>
+                <h3 v-if="player">{{ player2 }}'s Turn</h3>
+              </div>
+              <h1 v-if="winner">{{ winner }} Wone the match</h1>
+              <div
+                style="margin:0 0 10px 0;display: flex; justify-content: flex-end;"
+              >
+                <button @click="resetBut">RESET</button>
+              </div>
+              <div class="content">
+                <div
+                  @click="clickFunc(i)"
+                  class="tiles"
+                  v-for="(item, i) in keyValues"
+                  :key="i"
+                >
+                  <span :class="{'TransparentColor': item == '-'}">{{
+                    item
+                  }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
